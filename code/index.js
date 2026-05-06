@@ -246,8 +246,8 @@ export async function runAgent(userMessage) {
         try {
           const result = await fn(toolInput);
           const resultStr = typeof result === "string" ? result : JSON.stringify(result);
-          // Truncate very large results for the LLM context
-          const truncated = resultStr.length > 60000 ? resultStr.slice(0, 60000) + "\n...[TRUNCATED]" : resultStr;
+          // Truncate very large results for the LLM context to avoid hitting 6k TPM limits
+          const truncated = resultStr.length > 2000 ? resultStr.slice(0, 2000) + "\n...[TRUNCATED]" : resultStr;
           log("OBSERVE", C.blue, `Result (${resultStr.length} chars): ${resultStr.slice(0, 150)}...`);
           messages.push({
             role: "user",
