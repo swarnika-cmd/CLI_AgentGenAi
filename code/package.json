@@ -1,0 +1,25 @@
+{
+  "name": "scaler-cli-agent",
+  "version": "1.0.0",
+  "description": "Autonomous CLI AI agent that scrapes, analyzes, and reconstructs websites using ReAct-style reasoning",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.0",
+    "groq-sdk": "^0.5.0"
+  },
+  "keywords": [
+    "cli",
+    "ai-agent",
+    "web-scraper",
+    "react-loop"
+  ],
+  "license": "MIT"
+}
