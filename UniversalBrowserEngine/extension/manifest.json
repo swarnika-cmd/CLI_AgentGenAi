@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Universal UI Extractor",
+  "version": "1.0",
+  "description": "Extracts DOM, CSS, Layout, and A11y trees for Universal UI reconstruction.",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>", "http://localhost:8000/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
