@@ -1,0 +1,8 @@
+# Ignore all markdown files to keep implementation plans and internal files private
+*.md
+
+# Exclude the main README.md so the project documentation is visible
+!README.md
+
+# Ignore environment configuration files
+.env
