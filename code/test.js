@@ -116,8 +116,8 @@ await test("generateCleanHTML — produces valid HTML with sections", async () =
   assert.ok(html.includes("Welcome to MockBrand"), "Missing headline");
   assert.ok(html.includes("<header"), "Missing header element");
   assert.ok(html.includes("<footer"), "Missing footer element");
-  assert.ok(html.includes("Start Now"), "Missing CTA text");
-  assert.ok(html.includes("100+ Users"), "Missing stats");
+  assert.ok(html.includes("Book Free Live Class"), "Missing CTA text");
+  assert.ok(html.includes("93%"), "Missing stats");
 });
 
 // Test 3: saveFile — write, verify, cleanup

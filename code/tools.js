@@ -87,7 +87,8 @@ export async function generateScalerPage({ data } = {}) {
 
 // ─── Legacy alias ───
 export async function generateCleanHTML({ sections } = {}) {
-  return generateScalerPage({ data: sections });
+  await generateScalerPage({ data: sections });
+  return contentStore.pageHTML;
 }
 
 // ─── Tool: generateCSS ───
